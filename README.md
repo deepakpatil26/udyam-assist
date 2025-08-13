@@ -18,7 +18,7 @@ A high-fidelity, responsive clone of the first two steps of the Udyam MSME regis
 
 ## 🚀 Live Demo
 
-[**View the deployed application here!**](https://your-deployment-link.vercel.app/)
+[**View the deployed application here!**](https://udyam-assist.vercel.app/)
 
 _Note: Replace the placeholder link above with your actual Vercel deployment URL._
 
@@ -36,7 +36,7 @@ _Note: Replace the placeholder link above with your actual Vercel deployment URL
 - **Unit Tested:** Core validation logic and server actions are covered by unit tests using Jest.
 
 ![Form Preview](public/pan-step.png)
-*Preview of the PAN verification step*
+_Preview of the PAN verification step_
 
 ---
 
@@ -58,18 +58,21 @@ _Note: Replace the placeholder link above with your actual Vercel deployment URL
 To run this project locally, follow these steps:
 
 1.  **Clone the repository:**
+
     ```bash
-    git clone <your-repo-url>
-    cd <repo-name>
+    git clone https://github.com/deepakpatil26/udyam-assist
+    cd udyam-assist
     ```
 
 2.  **Install dependencies:**
+
     ```bash
     npm install
     ```
 
 3.  **Set up environment variables:**
     Create a file named `.env.local` in the root of the project and add your Supabase credentials:
+
     ```env
     NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_URL
     NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
@@ -98,9 +101,8 @@ This is a full-stack Next.js application where the frontend and backend are depl
 
 ## 📸 Screenshots
 
-
-|             Step 1: Aadhaar Validation              |           Step 2: PAN Validation            |
-| :-------------------------------------------------: | :-----------------------------------------: |
-| ![Aadhaar Step Screenshot](public/aadhar-step.png ) | ![PAN Step Screenshot](public/pan-step.png) |
-|              **Submission Successful**              |
-|  ![Success Screenshot](public/success-message.png)  |
+|             Step 1: Aadhaar Validation             |           Step 2: PAN Validation            |
+| :------------------------------------------------: | :-----------------------------------------: |
+| ![Aadhaar Step Screenshot](public/aadhar-step.png) | ![PAN Step Screenshot](public/pan-step.png) |
+|             **Submission Successful**              |
+| ![Success Screenshot](public/success-message.png)  |
