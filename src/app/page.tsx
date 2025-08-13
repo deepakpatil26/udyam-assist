@@ -8,82 +8,115 @@ import {
   Instagram,
   ChevronRight,
   ArrowUp,
+  Download,
+  Menu,
 } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
+const NavLinks = () => (
+  <>
+    <li>
+      <Button
+        variant="link"
+        className="text-white p-0 h-auto hover:underline justify-start"
+      >
+        Home
+      </Button>
+    </li>
+    <li>
+      <Button
+        variant="link"
+        className="text-white p-0 h-auto hover:underline justify-start"
+      >
+        NIC Code
+      </Button>
+    </li>
+    <li>
+      <Button
+        variant="link"
+        className="text-white p-0 h-auto hover:underline justify-start"
+      >
+        Useful Documents <ChevronDown className="inline-block h-4 w-4" />
+      </Button>
+    </li>
+    <li>
+      <Button
+        variant="link"
+        className="text-white p-0 h-auto hover:underline justify-start"
+      >
+        Print / Verify <ChevronDown className="inline-block h-4 w-4" />
+      </Button>
+    </li>
+    <li>
+      <Button
+        variant="link"
+        className="text-white p-0 h-auto hover:underline justify-start"
+      >
+        Update Details
+      </Button>
+    </li>
+    <li>
+      <Button
+        variant="link"
+        className="text-white p-0 h-auto hover:underline justify-start"
+      >
+        Login <ChevronDown className="inline-block h-4 w-4" />
+      </Button>
+    </li>
+  </>
+);
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full bg-background text-sm text-[#333]">
+    <div
+      id="top"
+      className="min-h-screen w-full bg-background text-sm text-[#333]"
+    >
       <header className="bg-[#3f3c6c] py-2 text-white shadow-md sticky top-0 z-50">
         <div className="container mx-auto">
-          <div className="flex items-center gap-2">
-            <Image
-              src="/icon.png"
-              alt="Ashoka Emblem"
-              width={40}
-              height={40}
-              data-ai-hint="ashoka emblem"
-            />
-            <div>
-              <h1 className="text-sm font-bold">
-                सूक्ष्म, लघु और मध्यम उद्यम मंत्रालय
-              </h1>
-              <p className="text-xs">
-                Ministry of Micro, Small & Medium Enterprises
-              </p>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Image
+                src="https://placehold.co/60x60.png"
+                alt="Ashoka Emblem"
+                width={40}
+                height={40}
+                data-ai-hint="ashoka emblem"
+              />
+              <div>
+                <h1 className="text-sm font-bold">
+                  सूक्ष्म, लघु और मध्यम उद्यम मंत्रालय
+                </h1>
+                <p className="text-xs">
+                  Ministry of Micro, Small & Medium Enterprises
+                </p>
+              </div>
+            </div>
+            <div className="md:hidden">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="text-white hover:bg-white/20"
+                  >
+                    <Menu className="h-6 w-6" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent
+                  side="left"
+                  className="bg-[#3f3c6c] text-white border-none pt-12 w-3/4"
+                >
+                  <ul className="flex flex-col items-start gap-y-4 text-lg">
+                    <NavLinks />
+                  </ul>
+                </SheetContent>
+              </Sheet>
             </div>
           </div>
           <nav className="mt-2 hidden md:block">
             <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
-              <li>
-                <Button
-                  variant="link"
-                  className="text-white p-0 h-auto hover:underline"
-                >
-                  Home
-                </Button>
-              </li>
-              <li>
-                <Button
-                  variant="link"
-                  className="text-white p-0 h-auto hover:underline"
-                >
-                  NIC Code
-                </Button>
-              </li>
-              <li>
-                <Button
-                  variant="link"
-                  className="text-white p-0 h-auto hover:underline"
-                >
-                  Useful Documents{" "}
-                  <ChevronDown className="inline-block h-4 w-4" />
-                </Button>
-              </li>
-              <li>
-                <Button
-                  variant="link"
-                  className="text-white p-0 h-auto hover:underline"
-                >
-                  Print / Verify{" "}
-                  <ChevronDown className="inline-block h-4 w-4" />
-                </Button>
-              </li>
-              <li>
-                <Button
-                  variant="link"
-                  className="text-white p-0 h-auto hover:underline"
-                >
-                  Update Details
-                </Button>
-              </li>
-              <li>
-                <Button
-                  variant="link"
-                  className="text-white p-0 h-auto hover:underline"
-                >
-                  Login <ChevronDown className="inline-block h-4 w-4" />
-                </Button>
-              </li>
+              <NavLinks />
             </ul>
           </nav>
         </div>
@@ -152,19 +185,33 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-lg mb-4">Video</h3>
               <div className="bg-black border-4 border-gray-500 p-2 rounded-lg max-w-sm">
-                <Image
-                  src="https://placehold.co/400x225.png"
-                  alt="Udyam Registration Video"
-                  width={400}
-                  height={225}
+                <video
+                  controls
                   className="w-full h-auto"
-                  data-ai-hint="video player"
-                />
+                  controlsList="nodownload"
+                >
+                  <source src="/videos/udyam-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
+              <a
+                href="/videos/udyam-video.mp4"
+                download="udyam-registration-video.mp4"
+              >
+                <Button
+                  variant="outline"
+                  className="mt-2 text-white border-white hover:bg-white hover:text-black"
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Video
+                </Button>
+              </a>
             </div>
-            <Button className="absolute -top-4 right-0 h-10 w-10 rounded-sm bg-[#3f3c6c] p-0 text-white shadow-lg hover:bg-[#3f3c6c]/90 hidden md:flex">
-              <ArrowUp className="h-6 w-6" />
-            </Button>
+            <a href="#top">
+              <Button className="absolute -top-4 right-0 h-10 w-10 rounded-sm bg-[#3f3c6c] p-0 text-white shadow-lg hover:bg-[#3f3c6c]/90 hidden md:flex">
+                <ArrowUp className="h-6 w-6" />
+              </Button>
+            </a>
           </div>
         </div>
         <div className="bg-[#1f1d3a] py-4">
