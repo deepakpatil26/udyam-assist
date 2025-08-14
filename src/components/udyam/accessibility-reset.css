@@ -7,7 +7,8 @@
   font-size: 1rem !important;
   letter-spacing: normal !important;
   line-height: 1.5 !important;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
 }
 
 /* Trigger button */
@@ -25,7 +26,8 @@
   bottom: 1rem !important;
   right: 1rem !important;
   z-index: 50 !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
 }
 
 .accessibility-icon {
@@ -160,27 +162,4 @@
 
 .dark .accessibility-reset-container {
   border-top-color: #374151 !important;
-}
-
-/* Override any accessibility classes that might affect the widget */
-.accessibility-widget-container .text-size-1,
-.accessibility-widget-container .text-size-2,
-.accessibility-widget-container .text-size-3,
-.accessibility-widget-container .text-spacing-1,
-.accessibility-widget-container .text-spacing-2,
-.accessibility-widget-container .text-spacing-3,
-.accessibility-widget-container .accessibility-dyslexia,
-.accessibility-widget-container .accessibility-highlight-links,
-.accessibility-widget-container .accessibility-hide-images,
-.accessibility-widget-container .accessibility-big-cursor {
-  /* Reset all text properties */
-  font-size: 1rem !important;
-  letter-spacing: normal !important;
-  line-height: 1.5 !important;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-}
-
-/* Ensure the widget is always visible and clickable */
-.accessibility-widget-container * {
-  z-index: 2147483647 !important; /* Max z-index */
 }

@@ -232,9 +232,9 @@ export function AccessibilityWidget() {
     }
 
     // Line height
-    const lineHeights = [1.5, 2.0, 2.5, 3.0];
+    const lineHeights = [2.0, 3.0, 4.0, 5.0];
     const lineHeightValue = lineHeights[options.lineHeight];
-    body.style.setProperty("--accessibility-line-height", `${lineHeightValue}`);
+    html.style.setProperty("--accessibility-line-height", `${lineHeightValue}`);
 
     // Other toggles
     html.classList.toggle("accessibility-dyslexia", options.dyslexiaFriendly);
