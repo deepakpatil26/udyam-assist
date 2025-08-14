@@ -77,7 +77,7 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Image
-                src="https://placehold.co/60x60.png"
+                src="/icon.png"
                 alt="Ashoka Emblem"
                 width={40}
                 height={40}
@@ -185,27 +185,11 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-lg mb-4">Video</h3>
               <div className="bg-black border-4 border-gray-500 p-2 rounded-lg max-w-sm">
-                <video
-                  controls
-                  className="w-full h-auto"
-                  controlsList="nodownload"
-                >
+                <video controls className="w-full h-auto">
                   <source src="/videos/udyam-video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <a
-                href="/videos/udyam-video.mp4"
-                download="udyam-registration-video.mp4"
-              >
-                <Button
-                  variant="outline"
-                  className="mt-2 text-white border-white hover:bg-white hover:text-black"
-                >
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Video
-                </Button>
-              </a>
             </div>
             <a href="#top">
               <Button className="absolute -top-4 right-0 h-10 w-10 rounded-sm bg-[#3f3c6c] p-0 text-white shadow-lg hover:bg-[#3f3c6c]/90 hidden md:flex">
@@ -235,19 +219,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
-      <div className="fixed bottom-4 right-4 z-10">
-        <Button className="h-14 w-14 rounded-full bg-blue-600 p-0 text-white shadow-lg hover:bg-blue-700">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z" />
-          </svg>
-        </Button>
-      </div>
     </div>
   );
 }

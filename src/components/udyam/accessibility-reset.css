@@ -1,0 +1,186 @@
+/* Accessibility Widget Reset Styles */
+/* These styles ensure the accessibility widget itself is not affected by accessibility settings */
+
+/* Base container */
+.accessibility-widget-container {
+  /* Reset all text properties */
+  font-size: 1rem !important;
+  letter-spacing: normal !important;
+  line-height: 1.5 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+/* Trigger button */
+.accessibility-trigger {
+  width: 3.5rem !important;
+  height: 3.5rem !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1rem !important;
+  line-height: 1 !important;
+  position: fixed !important;
+  bottom: 1rem !important;
+  right: 1rem !important;
+  z-index: 50 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.accessibility-icon {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
+/* Sheet content */
+.accessibility-sheet {
+  /* Reset any inherited styles */
+  font-size: 1rem !important;
+  letter-spacing: normal !important;
+  line-height: 1.5 !important;
+  padding: 1.5rem !important;
+  max-width: 24rem !important;
+  width: 100% !important;
+}
+
+.accessibility-sheet-title {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 1.5rem !important;
+  text-align: center !important;
+}
+
+/* Options grid */
+.accessibility-options-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 0.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Option buttons */
+.accessibility-option-button {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 6rem !important;
+  padding: 0.75rem 0.5rem !important;
+  text-align: center !important;
+  border-radius: 0.375rem !important;
+  transition: all 0.2s ease !important;
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+  font-weight: 500 !important;
+  border: 1px solid #e5e7eb !important;
+  background-color: white !important;
+  color: #1f2937 !important;
+}
+
+.accessibility-option-button:hover {
+  background-color: #f9fafb !important;
+  color: #111827 !important;
+}
+
+.accessibility-option-active {
+  background-color: #eff6ff !important;
+  border-color: #3b82f6 !important;
+  color: #1d4ed8 !important;
+}
+
+.accessibility-option-icon {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.accessibility-option-label {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
+  font-weight: 400 !important;
+}
+
+/* Reset button */
+.accessibility-reset-container {
+  margin-top: 1rem !important;
+  border-top: 1px solid #e5e7eb !important;
+  padding-top: 1.25rem !important;
+  text-align: center !important;
+}
+
+.accessibility-reset-button {
+  width: 100% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.375rem !important;
+  border: 1px solid #e5e7eb !important;
+  background-color: white !important;
+  color: #1f2937 !important;
+  transition: all 0.2s ease !important;
+}
+
+.accessibility-reset-button:hover {
+  background-color: #f9fafb !important;
+  color: #111827 !important;
+}
+
+.accessibility-reset-icon {
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+/* Dark mode support */
+.dark .accessibility-widget-container {
+  color-scheme: light !important;
+}
+
+.dark .accessibility-option-button,
+.dark .accessibility-reset-button {
+  background-color: #1f2937 !important;
+  border-color: #374151 !important;
+  color: #f9fafb !important;
+}
+
+.dark .accessibility-option-button:hover,
+.dark .accessibility-reset-button:hover {
+  background-color: #111827 !important;
+}
+
+.dark .accessibility-option-active {
+  background-color: #1e40af !important;
+  border-color: #3b82f6 !important;
+  color: #eff6ff !important;
+}
+
+.dark .accessibility-reset-container {
+  border-top-color: #374151 !important;
+}
+
+/* Override any accessibility classes that might affect the widget */
+.accessibility-widget-container .text-size-1,
+.accessibility-widget-container .text-size-2,
+.accessibility-widget-container .text-size-3,
+.accessibility-widget-container .text-spacing-1,
+.accessibility-widget-container .text-spacing-2,
+.accessibility-widget-container .text-spacing-3,
+.accessibility-widget-container .accessibility-dyslexia,
+.accessibility-widget-container .accessibility-highlight-links,
+.accessibility-widget-container .accessibility-hide-images,
+.accessibility-widget-container .accessibility-big-cursor {
+  /* Reset all text properties */
+  font-size: 1rem !important;
+  letter-spacing: normal !important;
+  line-height: 1.5 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+/* Ensure the widget is always visible and clickable */
+.accessibility-widget-container * {
+  z-index: 2147483647 !important; /* Max z-index */
+}

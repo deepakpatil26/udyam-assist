@@ -28,7 +28,8 @@
       ]
     },
     "types": [
-      "jest"
+      "jest",
+      "@types/wav"
     ]
   },
   "include": [
