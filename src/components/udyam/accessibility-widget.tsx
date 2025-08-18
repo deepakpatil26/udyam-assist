@@ -72,22 +72,25 @@ export function AccessibilityWidget() {
   const [isSpeaking, setIsSpeaking] = React.useState(false);
   const { toast } = useToast();
 
-  const [options, setOptions] = React.useState<AccessibilityOptions>(() => {
-    if (typeof window !== "undefined") {
-      const savedOptions = localStorage.getItem("accessibilityOptions");
-      return savedOptions
-        ? JSON.parse(savedOptions)
-        : {
-            textSize: 0,
-            textSpacing: 0,
-            lineHeight: 0,
-            dyslexiaFriendly: false,
-            highlightLinks: false,
-            hideImages: false,
-            bigCursor: false,
-          };
+  const [options, setOptions] = React.useState<AccessibilityOptions>({
+    textSize: 0,
+    textSpacing: 0,
+    lineHeight: 0,
+    dyslexiaFriendly: false,
+    highlightLinks: false,
+    hideImages: false,
+    bigCursor: false,
+  });
+
+  // Load saved options from localStorage after component mounts
+  React.useEffect(() => {
+    const savedOptions = localStorage.getItem("accessibilityOptions");
+    if (savedOptions) {
+      setOptions(JSON.parse(savedOptions));
     }
-    return {
+  }, []);
+
+  const audioRef = React.useRef<HTMLAudioElement | null>(null);
       textSize: 0,
       textSpacing: 0,
       lineHeight: 0,
