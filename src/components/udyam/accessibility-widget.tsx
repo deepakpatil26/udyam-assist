@@ -90,7 +90,8 @@ export function AccessibilityWidget() {
     }
   }, []);
 
-  const audioRef = React.useRef<HTMLAudioElement | null>(null);
+  const resetSettings = () => {
+    setOptions({
       textSize: 0,
       textSpacing: 0,
       lineHeight: 0,
@@ -98,8 +99,8 @@ export function AccessibilityWidget() {
       highlightLinks: false,
       hideImages: false,
       bigCursor: false,
-    };
-  });
+    });
+  };
 
   const audioRef = React.useRef<HTMLAudioElement | null>(null);
 
@@ -128,7 +129,7 @@ export function AccessibilityWidget() {
     setOptions((prev) => ({ ...prev, [option]: !prev[option] }));
   };
 
-  const resetSettings = () => {
+  const resetSettings2 = () => {
     setOptions({
       textSize: 0,
       textSpacing: 0,
@@ -354,7 +355,7 @@ export function AccessibilityWidget() {
           </div>
           <div className="accessibility-reset-container">
             <Button
-              onClick={resetSettings}
+              onClick={resetSettings2}
               variant="outline"
               className="accessibility-reset-button"
             >
